@@ -34,7 +34,8 @@ var dbConfig = {
 
 var client = redis.createClient(dbConfig.port, dbConfig.hostname, {no_ready_check: true});
 client.auth(dbConfig.password, function (err) {
-    if (err) then throw err;
+    if (err) 
+    	console.log(err);
 });
 
 client.on('connect', function() {
